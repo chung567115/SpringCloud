@@ -33,7 +33,8 @@ public class HelloController {
     private String env;
 
     @GetMapping("/chung")
-    public String helloChung() {
+    public String helloChung() throws InterruptedException {
+        Thread.sleep(2000);
         return "Hello Chung By Provider on env:" + env + " and port:" + ipConfig.getPort();
     }
 

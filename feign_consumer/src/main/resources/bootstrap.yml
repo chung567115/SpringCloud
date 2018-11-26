@@ -1,7 +1,7 @@
 #eureka:
 #  client:
 #    service-url:
-#      defaultZone: http://localhost:8761/eureka/ #,http://localhost:8762/eureka/
+#      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
 #  instance:
 #    prefer-ip-address: true
 #    instance-id: ${spring.cloud.client.ip-address}:${server.port}
@@ -14,7 +14,6 @@
 #provider:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-
 spring:
   application:
     name: consumer
@@ -29,3 +28,46 @@ spring:
 #    password: guest
 #    host: localhost
 #    port: 5672
+#  zipkin:
+#    base-url: http://localhost:9411/
+#    sender:
+#      type: web
+#  sleuth:
+#    sampler:
+#      probability: 1
+#feign:
+#  client:
+#    config:
+#      default: #服务名，default为所有服务
+#        connectTimeout: 3000
+#        readTimeout: 5000
+#  hystrix:
+#    enabled: true #开启Feign熔断器
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 10000
+#    hello: #方法名，default为所有方法
+#      execution:
+#        timeout:
+#          enable: true
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 10000
+#      circuitBreaker:
+#        enabled: true
+#        requestVolumeThreshold: 10
+#        sleepWindowInMilliseconds: 10000
+#        errorThresholdPercentage: 50
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#logging:
+#  level:
+#    org.springframework.cloud.openfeign: debug
