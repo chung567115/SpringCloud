@@ -5,7 +5,7 @@
 |:--------:|:-----:|:-----:|
 |Spring Cloud Eureka   |   服务治理   | ZooKeeper、Consul|
 |Spring Cloud Feign|   服务通信   | Retrofit、OKHttp、HttpClient|
-||Spring Cloud Ribbon|   负载均衡   |  Nginx|
+|Spring Cloud Ribbon|   负载均衡   |  Nginx|
 |Spring Cloud Config|   配置中心   |  Consul|
 |Spring Cloud Bus|   消息总线   |  |
 |Spring Cloud Stream|   消息驱动  |  |
