@@ -12,5 +12,5 @@
 |Spring Cloud Bus|   消息总线   |  |
 |Spring Cloud Stream|   消息驱动  |  |
 |Spring Cloud Zuul|   统一网关   |  Janus、Spring Cloud Gateway|
-|Spring Cloud Hystrix|   熔断降级   |  |
+|Spring Cloud Hystrix|   熔断降级   | Sentinel、resilience4j |
 |Spring Cloud Sleuth|   链路跟踪   |  Zipkin、Pinpoint|
